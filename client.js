@@ -39,12 +39,80 @@ const employees = [
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
 
-for (let i = 0; i < employees.length; i++) {
-  const employLoop = employees[i];
-}
+// for (let i = 0; i < employees.length; i++) {
+//   console.log(employees[i]);
+//   employees[i];
+// }
 
-function employPayRoll(name, employeeNumber, salary, rating) {
-  
+function employPayRoll(employee) {
+  // for (let i = 0; i < employees.length; i++) {
+  //   console.log(employees[i]);
+  //   employees[i];
+  // }
+  // console.log(employee);
+  // bonusPercentage = employees;
+  let bonusPercent = [];
+  if (employee.reviewRating === 3 && employee.annualSalary < 65000) {
+    return employee.annualSalary * 0.04;
+  }
+  if (employee.reviewRating === 3 && employee.annualSalary > 65000) {
+    return employee.annualSalary * 0.03;
+  }
+  if (
+    employee.reviewRating === 3 &&
+    employee.annualSalary > 65000 &&
+    employee.employeeNumber.length === 4
+  ) {
+    return employee.annualSalary * 0.08;
+  }
+  //
+  //
+  //
+  //
+  //
+  //
+  if (employee.reviewRating === 4 && employee.annualSalary < 65000) {
+    return employee.annualSalary * 0.06;
+  }
+  if (employee.reviewRating === 4 && employee.annualSalary > 65000) {
+    return employee.annualSalary * 0.05;
+  }
+  if (
+    employee.reviewRating === 4 &&
+    employee.annualSalary > 65000 &&
+    employee.employeeNumber.length === 4
+  ) {
+    return employee.annualSalary * 0.1;
+  }
+  //
+  //
+  //
+  //
+  //
+  if (employee.reviewRating === 5 && employee.annualSalary < 65000) {
+    return employee.annualSalary * 0.1;
+  }
+  if (employee.reviewRating === 5 && employee.annualSalary > 65000) {
+    return employee.annualSalary * 0.09;
+  }
+  if (
+    employee.reviewRating === 5 &&
+    employee.annualSalary > 65000 &&
+    employee.employeeNumber.length === 4
+  ) {
+    return employee.annualSalary * 0.14;
+  }
+  //
+  //
+  //
+  if (employee.reviewRating <= 2) {
+    return console.log("No Bonus, Rating at 2 or below");
+  }
 }
-
+console.log();
 console.log(employees);
+console.log(employPayRoll(employees[0]));
+console.log(employPayRoll(employees[1]));
+console.log(employPayRoll(employees[2]));
+console.log(employPayRoll(employees[3]));
+console.log(employPayRoll(employees[4]));
