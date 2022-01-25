@@ -51,7 +51,10 @@ function employPayRoll(employee) {
   // }
   // console.log(employee);
   // bonusPercentage = employees;
-  let bonusPercent = [];
+  if (employee.reviewRating <= 2) {
+    return "No Bonus, Rating at 2 or below";
+  }
+
   if (employee.reviewRating === 3 && employee.annualSalary < 65000) {
     return employee.annualSalary * 0.04;
   }
@@ -100,14 +103,21 @@ function employPayRoll(employee) {
     employee.annualSalary > 65000 &&
     employee.employeeNumber.length === 4
   ) {
-    return employee.annualSalary * 0.14;
+    return employee.annualSalary * 0.13;
   }
   //
   //
   //
-  if (employee.reviewRating <= 2) {
-    return console.log("No Bonus, Rating at 2 or below");
-  }
+  // else {
+  //   return console.log("No Bonus, Rating at 2 or below");
+  // }
+  // // if (employee.reviewRating <= 2) {
+  // //   return console.log("No Bonus, Rating at 2 or below");
+  // // }
+}
+let totalComp = employPayRoll(employees.length) 
+function () {
+  
 }
 console.log();
 console.log(employees);
