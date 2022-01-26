@@ -61,11 +61,7 @@ function employPayRoll(employee) {
   if (employee.reviewRating === 3 && employee.annualSalary > 65000) {
     return employee.annualSalary * 0.03;
   }
-  if (
-    employee.reviewRating === 3 &&
-    employee.annualSalary > 65000 &&
-    employee.employeeNumber.length === 4
-  ) {
+  if (employee.reviewRating === 3 && employee.annualSalary > 65000 && employee.employeeNumber.length === 4) {
     return employee.annualSalary * 0.08;
   }
   //
@@ -80,11 +76,7 @@ function employPayRoll(employee) {
   if (employee.reviewRating === 4 && employee.annualSalary > 65000) {
     return employee.annualSalary * 0.05;
   }
-  if (
-    employee.reviewRating === 4 &&
-    employee.annualSalary > 65000 &&
-    employee.employeeNumber.length === 4
-  ) {
+  if (employee.reviewRating === 4 && employee.annualSalary > 65000 && employee.employeeNumber.length === 4) {
     return employee.annualSalary * 0.1;
   }
   //
@@ -98,11 +90,7 @@ function employPayRoll(employee) {
   if (employee.reviewRating === 5 && employee.annualSalary > 65000) {
     return employee.annualSalary * 0.09;
   }
-  if (
-    employee.reviewRating === 5 &&
-    employee.annualSalary > 65000 &&
-    employee.employeeNumber.length === 4
-  ) {
+  if (employee.reviewRating === 5 && employee.annualSalary > 65000 && employee.employeeNumber.length === 4) {
     return employee.annualSalary * 0.13;
   }
   //
@@ -115,11 +103,11 @@ function employPayRoll(employee) {
   // //   return console.log("No Bonus, Rating at 2 or below");
   // // }
 }
-let totalComp = employPayRoll(employees.length) 
-function () {
-  
-}
-console.log();
+// let totalComp = employPayRoll(employees.length)
+// function () {
+
+// }
+// console.log();
 console.log(employees);
 console.log(employPayRoll(employees[0]));
 console.log(employPayRoll(employees[1]));
